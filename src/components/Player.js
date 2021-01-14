@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
   faAngleLeft,
   faAngleRight,
   faPause,
-  faVolumeDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { playAudio } from "../util";
@@ -21,7 +20,7 @@ const Player = ({
   setCurrentSong,
   setSongs,
 }) => {
-  const [activeVolume, setActiveVolume] = useState(false);
+  // const [activeVolume, setActiveVolume] = useState(false);
   //UseEffect Update List
   const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
@@ -84,11 +83,11 @@ const Player = ({
     }
     if (isPlaying) audioRef.current.play();
   };
-  const changeVolume = (e) => {
-    let value = e.target.value;
-    audioRef.current.volume = value;
-    setSongInfo({ ...songInfo, volume: value });
-  };
+  // const changeVolume = (e) => {
+  //   let value = e.target.value;
+  //   audioRef.current.volume = value;
+  //   setSongInfo({ ...songInfo, volume: value });
+  // };
 
   return (
     <div className="player">
@@ -130,7 +129,7 @@ const Player = ({
           icon={faAngleRight}
           onClick={() => skipTrackHandler("skip-forward")}
         />
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           onClick={() => setActiveVolume(!activeVolume)}
           icon={faVolumeDown}
         />
@@ -143,7 +142,7 @@ const Player = ({
             step="0.01"
             type="range"
           />
-        )}
+        )} */}
       </div>
     </div>
   );
