@@ -1,3 +1,5 @@
+## Pottyfy - A LoFi Music Player
+
 A simple music player developed using React, JavaScript & Sass. Credits to ChillHop for the Music.
 
 ![alt text](https://i.imgur.com/C705LHs.jpg)
